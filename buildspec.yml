@@ -8,5 +8,4 @@ phases:
       - zip test.zip *
       - ls
       - aws s3 cp test.zip s3://codedeploy-artifacts-me-south-1-926940654199/Test/DeployArtif/test.zip
-      - aws s3 cp s3://codedeploy-artifacts-me-south-1-926940654199/Test/DeployArtif/test.zip s3://aws-codedeploy-artifacts-me-south-1-926940654199/Test/DeployArtif/test.zip
-      - aws deploy push --application-name Test --s3-location s3://codedeploy-artifacts-me-south-1-926940654199/Test/DeployArtif/test.zip
+      - aws deploy push --application-name Test --s3-location s3://codedeploy-artifacts-me-south-1-926940654199/Test/DeployArtif/test.zip --region me-south-1
