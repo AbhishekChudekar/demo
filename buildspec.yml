@@ -6,3 +6,4 @@ phases:
       - echo Entered the install phase...
       - ls
       - zip test.zip *
+      - ls
