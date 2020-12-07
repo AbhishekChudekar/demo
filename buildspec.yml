@@ -6,3 +6,5 @@ phases:
       - echo Entered the install phase...
       - ls
       - aws deploy push --application-name Test --s3-location s3://aws-codedeploy-artifacts-me-south-1-926940654199/Test/DeployArtif/test.zip --region me-south-1
+      - etag=$(aws s3api head-object --bucket aws-codedeploy-artifacts-me-south-1-926940654199 --key Test/DeployArtif/test.zip --query ETag --output text --region me-south-1)
+      - aws deploy create-deployment --application-name Test --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name Test --s3-location bucket=aws-codedeploy-artifacts-me-south-1-926940654199,bundleType=zip,key=Test/DeployArtif/test.zip,eTag=$etag --region me-south-1
