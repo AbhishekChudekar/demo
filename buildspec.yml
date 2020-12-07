@@ -3,3 +3,6 @@ phases:
   install:
     commands:
       - echo Entered the install phase...
+artifacts:
+  files:
+    - **/*
