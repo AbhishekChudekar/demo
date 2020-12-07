@@ -5,4 +5,4 @@ phases:
     commands:
       - echo Entered the install phase...
       - ls
-      - aws deploy push --application-name Test --s3-location s3://codedeploy-artifacts-me-south-1-926940654199/Test/DeployArtif/test.zip --region me-south-1
+      - aws deploy push --application-name Test --s3-location s3://codedeploy-artifacts-me-south-1-926940654199/Test/DeployArtif/test.zip
