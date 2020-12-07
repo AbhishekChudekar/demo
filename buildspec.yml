@@ -7,3 +7,4 @@ phases:
       - ls
       - zip test.zip *
       - ls
+      - aws s3 cp test.zip s3://codedeploy-artifacts-me-south-1-926940654199/Test/DeployArtif/test.zip
